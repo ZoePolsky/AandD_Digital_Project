@@ -33,22 +33,22 @@ splash = displayio.Group(max_size=10)
 display.show(splash)
 
 while True:
-    my_text = "hola"
+    my_text = "hola"    #add your text here
     text_area2 = label.Label(
     terminalio.FONT, text=my_text, scale=2, color=0xFFFFFF, x=13, y=20
     )
-    splash.append(text_area2)
-
-    display.show(splash)
+    splash.append(text_area2)   #add your text to splash
+    
+    display.show(splash)   #anything that is in splash will show on the screen
     time.sleep(2)
 
-    splash.pop(-1)
-    my_text = "adios"
+    splash.pop(-1)    #remove the last item added to splash
+    my_text = "adios"   #add some next text
     text_area2 = label.Label(
     terminalio.FONT, text=my_text, scale=2, color=0xFFFFFF, x=13, y=20
     )
-    splash.append(text_area2)
-
-    display.show(splash)
+    splash.append(text_area2) #add your text to splash
+    
+    display.show(splash)    #anything that is in splash will show on the screen
     time.sleep(2)
-    splash.pop(-1)
+    splash.pop(-1)    #remove the last item added to splash
