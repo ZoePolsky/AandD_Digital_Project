@@ -46,7 +46,7 @@ if False:   # change to True if you want to write the time!
 display = adafruit_displayio_sh1107.SH1107(display_bus, width=WIDTH, height=HEIGHT)
 
 # Make the display context
-splash = displayio.Group(max_size=10)
+splash = displayio.Group()
 display.show(splash)
 
 color_bitmap = displayio.Bitmap(WIDTH, HEIGHT, 1)
