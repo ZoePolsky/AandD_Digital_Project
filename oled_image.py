@@ -39,9 +39,8 @@ display.show(group)
 while True:
     
     my_text = "Enjoy"    #add your text here
-    text_area = label.Label(
-    terminalio.FONT, text=my_text, scale=2, color=0xFFFFFF, x=70, y=30)
-    group.append(text_area)   #add your text to group
+    total_text = label.Label(terminalio.FONT, text=my_text, scale=2, color=0xFFFFFF, x=70, y=30)
+    group.append(total_text)   #add your text to group
 
     # Add the Group to the Display
     display.show(group)
@@ -49,9 +48,9 @@ while True:
     time.sleep(2)
     group.pop(-1)
     
-    my_text = "Kewl"    #add your text here
-    text_area = label.Label(terminalio.FONT, text=my_text, scale=2, color=0xFFFFFF, x=70, y=30)
-    group.append(text_area)   #add your text to group
+    my_text = "Life"    #add your text here
+    total_text = label.Label(terminalio.FONT, text=my_text, scale=2, color=0xFFFFFF, x=70, y=30)
+    group.append(total_text)   #add your text to group
     
     time.sleep(2)
     group.pop(-1)
