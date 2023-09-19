@@ -8,21 +8,11 @@ lt_blue = 0x00FFFF
 blue = 0x0000FF
 
 main_group = Group()
-blinka_img = OnDiskBitmap("images/eye.bmp")
-
-tile_grid = TileGrid(bitmap=blinka_img, pixel_shader=blinka_img.pixel_shader)
-main_group.append(tile_grid)
-
-board.DISPLAY.show(main_group)
-
-tile_grid.x = board.DISPLAY.width // 2 - blinka_img.width // 2
-
-main_group = Group()
 blinka_img = OnDiskBitmap("images/eye.bmp")  # you must save your image into an images folder on your circuitpy device
 
 while True:
 
-    tile_grid = TileGrid(bitmap=blinka_img, pixel_shader=blinka_img.pixel_shader)  #reference your image here
+    tile_grid = TileGrid(bitmap=blinka_img, pixel_shader=blinka_img.pixel_shader,)  #reference your image here
     main_group.append(tile_grid)
     board.DISPLAY.show(main_group)
     tile_grid.x = board.DISPLAY.width // 2 - blinka_img.width // 2
