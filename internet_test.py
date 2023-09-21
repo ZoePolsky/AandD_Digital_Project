@@ -8,7 +8,6 @@ import time
 # URLs to fetch from
 TEXT_URL = "http://wifitest.adafruit.com/testwifi/index.html"
 JSON_QUOTES_URL = "https://www.adafruit.com/api/quotes.php"
-JSON_STARS_URL = "https://api.github.com/repos/adafruit/circuitpython"
 
 # Get wifi details and more from a secrets.py file
 try:
