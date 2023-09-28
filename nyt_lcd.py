@@ -58,8 +58,8 @@ def wrap_nicely(string, max_chars):
 while True:
     response = requests.get(JSON_DATA_URL)
     data = response.json()
-    random = random.randint(0,6)
-    headline = data["results"][random]["title"]
+    random_nyt = random.randint(0,6)
+    headline = data["results"][random_nyt]["title"]
     print(headline)
 
     text = wrap_nicely(headline,20)
