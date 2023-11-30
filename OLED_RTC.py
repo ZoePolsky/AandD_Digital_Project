@@ -7,7 +7,6 @@ import board
 import time
 import displayio
 import terminalio
-import adafruit_ahtx0
 import busio
 import adafruit_pcf8523
 
