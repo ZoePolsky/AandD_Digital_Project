@@ -8,7 +8,7 @@ import time
 import displayio
 import terminalio
 import busio
-import adafruit_pcf8523
+from adafruit_pcf8523.PCF8523 import PCF8523
 
 # can try import bitmap_label below for alternative
 from adafruit_display_text import label
@@ -16,7 +16,7 @@ import adafruit_displayio_sh1107
 
 # Create sensor object, communicating over the board's default I2C bus
 i2c = board.I2C()  # uses board.SCL and board.SDA
-rtc = adafruit_pcf8523.PCF8523(i2c)
+rtc = PCF8523(i2c)
 
 displayio.release_displays()
 # oled_reset = board.D9
