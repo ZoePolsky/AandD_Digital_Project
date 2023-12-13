@@ -8,7 +8,7 @@ import time
 import displayio
 import terminalio
 import busio
-from adafruit_pcf8523.PCF8523 import PCF8523
+from adafruit_pcf8523.pcf8523 import PCF8523
 
 # can try import bitmap_label below for alternative
 from adafruit_display_text import label

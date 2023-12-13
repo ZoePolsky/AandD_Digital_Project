@@ -1,5 +1,5 @@
 import busio
-from adafruit_pcf8523 import PCF8523
+from adafruit_pcf8523.pcf8523 import PCF8523
 import time
 import board
 
