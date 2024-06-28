@@ -16,7 +16,7 @@ switch = DigitalInOut(board.A3)
 switch.direction = Direction.INPUT
 switch.pull = Pull.UP
 
-pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3, auto_write=False)
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.6, auto_write=False)
 
 # Remove DC bias before computing RMS.
 def mean(values):
