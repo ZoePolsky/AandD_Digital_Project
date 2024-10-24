@@ -1,3 +1,5 @@
+#Make sure you have the adafruit_reqests, adafruit_connection_manager, and adafruit_display_text libraries.
+
 import ipaddress
 import ssl
 import wifi
