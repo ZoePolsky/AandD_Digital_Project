@@ -1,3 +1,5 @@
+#works with circuitPython 9
+
 import ipaddress
 import ssl
 import wifi
@@ -68,6 +70,6 @@ while True:
     text_area = bitmap_label.Label(terminalio.FONT, text=text, scale=scale, color=purple)
     text_area.x = 0
     text_area.y = 0
-    board.DISPLAY.show(text_area)
+    board.DISPLAY.root_group = (text_area)
 
     time.sleep(60)
