@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2021 Tim C for Adafruit Industries
-# SPDX-License-Identifier: MIT
-"""
-CircuitPython simple text display demo
-"""
 import board
 import time
 import terminalio
@@ -20,7 +15,7 @@ while True:
     text_area = bitmap_label.Label(terminalio.FONT, text=text, scale=scale, color=red)
     text_area.x = 10
     text_area.y = 50
-    board.DISPLAY.show(text_area)
+    board.DISPLAY.root_group = (text_area)
 
     time.sleep (0.5)
     
@@ -28,5 +23,5 @@ while True:
     text_area = bitmap_label.Label(terminalio.FONT, text=text, scale=scale, color=purple)
     text_area.x = 10
     text_area.y = 50
-    board.DISPLAY.show(text_area)
+    board.DISPLAY.root_group = (text_area)
     time.sleep (0.5)
