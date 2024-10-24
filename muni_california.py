@@ -1,3 +1,5 @@
+#works with circuitPython 9
+
 import ipaddress
 import ssl
 import wifi
@@ -37,12 +39,12 @@ while True:
     muni_eta = response.json()[0]['values'][0]['minutes']
     print(muni_route + " arrives in " + str(muni_eta) + " minutes at " + str(muni_stop) + " stop")
     
-    text = f"{muni_route}\narrives in \n{muni_eta} minutes at \n{muni_stop} stop."  #\n creates a new line
+    text = f"{muni_route} bus\narrives in \n{muni_eta} minutes at \n{muni_stop} stop."  #\n creates a new line
     scale = 2
 
     text_area = bitmap_label.Label(terminalio.FONT, text=text, scale=scale, color=purple)
     text_area.x = 10
     text_area.y = 20
-    board.DISPLAY.show(text_area)
+    board.DISPLAY.root_group = (text_area)
 
     time.sleep(30)
