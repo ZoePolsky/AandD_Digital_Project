@@ -16,11 +16,17 @@ scale = 4
 text_area = bitmap_label.Label(terminalio.FONT, text=text, scale=scale)
 text_area.x = 0
 text_area.y = 60
-board.DISPLAY.show(text_area)
+board.DISPLAY.root_group = (text_area)
 
 while True:
-    for move in range(-300, 300,1):
+    for move in range(-300, 300,2):
         text_area.x = move
         text_area.y = 60
-        board.DISPLAY.show(text_area)
+        board.DISPLAY.root_group = (text_area)
+        time.sleep(0.01)
+    
+    for move in range(-100, 200,1):
+        text_area.x = 60
+        text_area.y = move
+        board.DISPLAY.root_group = (text_area)
         time.sleep(0.01)
