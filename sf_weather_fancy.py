@@ -1,3 +1,5 @@
+#tested on circuitPython 9 
+
 import ipaddress
 import ssl
 import wifi
@@ -13,7 +15,7 @@ red = 0xFF0000
 purple = 0xFF00FF
 
 # URLs to fetch from
-APPID = "YOUR API KEY HERE" #get api key here: https://openweathermap.org/api
+APPID = "YOUR ID HERE, BETWEEN THE QUOTES" #get api key here: https://openweathermap.org/api
 JSON_DATA_URL = f"http://api.openweathermap.org/data/2.5/weather?q=94112,us&APPID={APPID}&units=imperial"
 
 # Get wifi details and more from a secrets.py file
@@ -43,10 +45,6 @@ while True:
     text_area = bitmap_label.Label(terminalio.FONT, text=text, scale=scale, color=red)
     text_area.x = 10
     text_area.y = 20
-    board.DISPLAY.show(text_area)
+    board.DISPLAY.root_group = (text_area)
 
     time.sleep(30)
-
-
-
-
