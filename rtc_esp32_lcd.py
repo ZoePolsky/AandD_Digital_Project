@@ -1,16 +1,19 @@
+#works with circuitPython 9
 #print time and date on ESP32-S3 LCD screen
 
-import time
-import board
+
 import busio
-import adafruit_pcf8523
 import terminalio
 from adafruit_display_text import bitmap_label
+import time
+import board
+from adafruit_pcf8523.pcf8523 import PCF8523
+
+i2c = board.I2C()  # uses board.SCL and board.SDA
+# i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
+rtc = PCF8523(i2c)
 
 yellowy = 0x99FF22
-
-myI2C = busio.I2C(board.SCL, board.SDA)
-rtc = adafruit_pcf8523.PCF8523(myI2C)
 
 days = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
 
@@ -40,7 +43,6 @@ while True:
     text_area = bitmap_label.Label(terminalio.FONT, text=text, scale=scale, color=yellowy)
     text_area.x = 5
     text_area.y = 20
-    board.DISPLAY.show(text_area)
+    board.DISPLAY.root_group = (text_area)
 
     time.sleep (0.1)
-
