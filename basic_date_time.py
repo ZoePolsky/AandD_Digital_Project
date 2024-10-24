@@ -1,10 +1,10 @@
-import busio
-import adafruit_pcf8523
 import time
 import board
+from adafruit_pcf8523.pcf8523 import PCF8523
 
-myI2C = busio.I2C(board.SCL, board.SDA)
-rtc = adafruit_pcf8523.PCF8523(myI2C)
+i2c = board.I2C()  # uses board.SCL and board.SDA
+# i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
+rtc = PCF8523(i2c)
 
 days = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
 
