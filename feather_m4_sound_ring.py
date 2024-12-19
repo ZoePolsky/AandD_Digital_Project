@@ -7,7 +7,7 @@ import neopixel
 from digitalio import DigitalInOut, Direction, Pull
 
 pixel_pin = board.D5
-num_pixels = 16  # number of leds pixels on the ring
+num_pixels = 8  # number of leds pixels on the ring
 
 pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.6, auto_write=False)
 
@@ -38,7 +38,7 @@ while True:
         mag = 16
 
     for x in range(0, mag):
-        pixels[x] = (255, 0, 0)
+        pixels[x] = (0, 0, 225)
     pixels.show()
     time.sleep(0.01)
     pixels.fill((0, 0, 0))
